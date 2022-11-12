@@ -1,3 +1,4 @@
+import 'package:ewinet_testimony/HomePage.dart';
 import 'package:flutter/material.dart';
 
 import 'Article.dart';
@@ -16,22 +17,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage1(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage1 extends StatefulWidget {
+  const MyHomePage1({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage1> createState() => _MyHomePageState1();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-
+class _MyHomePageState1 extends State<MyHomePage1> {
 
   @override
   Widget build(BuildContext context) {
@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: [
-            Article('Title','Date','https://picsum.photos/250?image=9'),
-            Article('Title','Date','https://picsum.photos/250?image=9'),
+            HomePage(),
+            HomePage(),
             Article('Title','Date','https://picsum.photos/250?image=9'),
             Article('Title','Date','https://picsum.photos/250?image=9'),
             Article('Title','Date','https://picsum.photos/250?image=9'),
